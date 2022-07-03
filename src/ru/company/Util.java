@@ -30,6 +30,10 @@ public class Util {
         }
     }
 
+    /**
+     *
+     * проверяет число в заданном диапазоне
+     */
     public void numberVerification(int num) {
         if (num > 10 || num < 1) {
             System.out.println("Введите корректное выражение!");
