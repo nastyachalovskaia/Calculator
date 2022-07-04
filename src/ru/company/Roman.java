@@ -6,8 +6,8 @@ public class Roman {
      **/
     public String convertNumToRoman(int numArabian) {
         if (numArabian < 1) {
-            System.out.println("Неккоректный ввод.");
-            System.exit(0);
+            throw new RuntimeException("B римской системе нет отрицательных чисел.");
+
         }
         String[] roman = {"O", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX",
                 "XXI", "XXII", "XXIII", "XXIV", "XXV", "XXVI", "XXVII", "XXVIII", "XXIX", "XXX", "XXXI", "XXXII", "XXXIII", "XXXIV", "XXXV", "XXXVI", "XXXVII", "XXXVIII", "XXXIX", "XL",
@@ -47,10 +47,9 @@ public class Roman {
             case "X":
                 return 10;
             default:
-                System.out.println("Введено неккоректное чиселко.");
-                System.exit(0);
+                throw new RuntimeException("Неверный формат операции.");
+
         }
-        return -1;
     }
 
 }

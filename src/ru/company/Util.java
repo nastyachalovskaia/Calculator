@@ -10,8 +10,7 @@ public class Util {
             return firstInt * secondInt;
         } else if (mark == "/") {
             if (secondInt == 0) {
-                System.out.println("На ноль разделить нельзя.");
-                System.exit(0);
+                throw new ArithmeticException();
             }
             return firstInt / secondInt;
         }
@@ -36,8 +35,7 @@ public class Util {
      */
     public void numberVerification(int num) {
         if (num > 10 || num < 1) {
-            System.out.println("Введите корректное выражение!");
-            System.exit(0);
+            throw new RuntimeException("Введено неккоректное выражение.");
         }
     }
 }

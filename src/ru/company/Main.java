@@ -21,8 +21,8 @@ public class Main {
         } else if (input.indexOf("/") > 0) {
             mark = "/";
         } else {
-            System.out.println("Введите корректное выражение!!!");
-            System.exit(1);
+            throw new RuntimeException("Введите корректное выражение!!!");
+
         }
 
         Roman roman = new Roman();
